@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+		<meta charset="utf-8" />
+		<title>Blackout: Error 451</title>
+		<style>
+		    a {
+		        text-decoration: none;
+		    }
+		    body {
+		        font-size: 16px;
+		        line-height: 1.5em;
+		        padding: 2em;
+		    }
+		    pre {
+		        border: 1px solid #333;
+		        padding: 1em;
+		        display: inline-block;
+		    }
+		</style>
+  
+	</head>
+	<body>
+  <script src="blackclose.js"></script>
+    <script type='text/javascript'>
+      var system_time = '2013/07/17 10:42:15'; //system time from browser
+      var begin_time = '2013/07/16 23:59:37'; //time to begin
+      var end_time = '2014/06/29 23:59:59'; // time to end
+      var cookie_key = 'ERROR451';
+      var cookie_val = 'error451';
+      var cookie_expire = 599; //cookie expired to mins
+      // call blackclose function from blackclose.js
+      blackclose(system_time,begin_time,end_time,cookie_key,cookie_val,cookie_expire); 
+    </script>
+        <div>
+            <h1>ERROR 451: 本網頁基於國家法律而封鎖</h1>
+        </div>
+	</body>
+</html>
