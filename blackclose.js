@@ -6,7 +6,7 @@ function blackclose(system_time,begin_time,end_time,cookie_key,cookie_val,cookie
   expire = TimeToExpire.getTime() - TimeToBegin.getTime();//counting that will to the end 
   
   CookieExpire = new Date();
-  CookieExpire.setTime(CookieExpire.getTime()+(600*60*1000)+(cookie_expire*1000));
+  CookieExpire.setTime(CookieExpire.getTime()+(1000*60*cookie_expire));
   cookie_expiregmt = CookieExpire.toGMTString();
   cookie_expiretime = cookie_expiregmt;
   //testing values
@@ -14,7 +14,7 @@ function blackclose(system_time,begin_time,end_time,cookie_key,cookie_val,cookie
   //document.write(TimeToBegin.getTime()+'<br>');
   //document.write(elapsed+'<br>');
   //document.write(expire+'<br>');
-  //document.write(cookie_expiretime);
+  document.write(cookie_expiretime + '<br>');
   
   if(elapsed < 0){ // if elapsed small than zero ,it is begin.
     if(expire > 0){ // if expire number big than zero , it is doing .
@@ -24,6 +24,7 @@ function blackclose(system_time,begin_time,end_time,cookie_key,cookie_val,cookie
       }
     }
   }
+document.write(document.cookie);
 }
 
 function getCookie(name){
